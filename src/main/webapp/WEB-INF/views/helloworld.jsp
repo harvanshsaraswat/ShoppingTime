@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
-    <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/resources/css/font-awesome.min.css"/>" rel="stylesheet">
-    <link href="<c:url value="/resources/css/prettyPhoto.css"/>" rel="stylesheet">
-    <link href="<c:url value="/resources/css/price-range.css"/>" rel="stylesheet">
-    <link href="<c:url value="/resources/css/animate.css"/>" rel="stylesheet">
-	<link href="<c:url value="/resources/css/main.css"/>" rel="stylesheet">
-	<link href="<c:url value="/resources/css/responsive.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/mytheme/css/bootstrap.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/mytheme/css/font-awesome.min.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/mytheme/css/prettyPhoto.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/mytheme/css/price-range.css"/>" rel="stylesheet">
+    <link href="<c:url value="/resources/mytheme/css/animate.css"/>" rel="stylesheet">
+	<link href="<c:url value="/resources/mytheme/css/main.css"/>" rel="stylesheet">
+	<link href="<c:url value="/resources/mytheme/css/responsive.css"/>" rel="stylesheet">
    <!--  [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -60,7 +60,7 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +0 00 00 00 000</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
@@ -85,12 +85,12 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+							<a href="index.jsp"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
+									India
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
@@ -99,16 +99,7 @@
 								</ul>
 							</div>
 							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Canadian Dollar</a></li>
-									<li><a href="#">Pound</a></li>
-								</ul>
-							</div>
+							
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -140,14 +131,14 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="helloworld.html" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li> 
 										<li><a href="checkout.html">Checkout</a></li> 
 										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+										<li><a href="login.do">Login</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -186,7 +177,7 @@
 							<div class="item active">
 								<div class="col-sm-6">
 									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
+									<h2>Time for Shopping</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
@@ -203,8 +194,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
+									<img src="images/girl2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -1087,11 +1078,11 @@
 	
 
   
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/resources/mytheme/js/jquery.js" type="text/javascript"></script>
+	<script src="/resources/mytheme/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/resources/mytheme/js/jquery.scrollUp.min.js" type="text/javascript"></script>
+	<script src="/resources/mytheme/js/price-range.js" type="text/javascript"></script>
+    <script src="/resources/mytheme/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="/resources/mytheme/js/main.js" type="text/javascript"></script>
 </body>
 </html>
