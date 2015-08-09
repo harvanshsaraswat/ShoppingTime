@@ -25,6 +25,10 @@ public class ProductDeatilServiceImpl  implements ProductDeatilService{
 	    
 	    @Transactional
 		public void addProductDetail(ProductDetail productDetail) {
+	    	
+	    	System.out.println("IN SIDE SERVICE ________________");
+	    	System.out.println(" Category:" + productDetail.getProductCategory() + 
+                    "Product Cost:" + productDetail.getProductCost());
 			 this.productDeatilDAO.addProductDetail(productDetail);			
 		}
 

@@ -2,11 +2,16 @@ package com.technozip.dao;
 
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.technozip.dto.ProductDetail;
 
@@ -15,12 +20,27 @@ public class ProductDeatilDAOImpl implements ProductDeatilDAO {
 	
 	 private static final Logger logger = LoggerFactory.getLogger(ProductDeatilDAOImpl.class);
 	 
-	    private SessionFactory sessionFactory;
+	 @Autowired
+    private SessionFactory sessionFactory;
+	 
+	
 
-	@Override
+	@Transactional
 	public void addProductDetail(ProductDetail productDetail) {
+		System.out.println("IN SIDE DAO ============");
 		 Session session = this.sessionFactory.getCurrentSession();
-	        session.persist(productDetail);
+		 Transaction tx = null;
+	     try{
+	     tx = session.beginTransaction();
+	     session.save(productDetail);   
+	     tx.commit();
+	       }catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      }finally {
+	         session.close(); 
+	      }
+	        System.out.println("jjjjjjjjj");
 	        logger.info("Product saved successfully, Product Details="+productDetail);		
 	}
 

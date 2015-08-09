@@ -126,8 +126,8 @@
 						<form:form method="post" action="addNewProduct.html" modelAttribute="productDetail">
                            <form:input path="productName" />
                             <form:input path="productCategory" />
-                            <form:input path="productcost" />
-                             <form:input path="productuse"/>
+                            <form:input path="productCost" />
+                             <form:input path="productUse"/>
 							<button type="submit" class="btn btn-default">Save</button>
 						</form:form>
 					</div><!--/login form-->

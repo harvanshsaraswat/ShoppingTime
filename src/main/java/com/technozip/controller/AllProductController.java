@@ -1,12 +1,11 @@
 package com.technozip.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,25 +43,29 @@ public class AllProductController {
 	    }
 	    
 	    @RequestMapping(value = "/adminNewProduct", method = RequestMethod.GET)
-	    public String adminNewProduct() {	    	
-	    	System.out.println("INSIDE admin New Product ");
-	        return "admin/addProduct";
+	    public String adminNewProduct(@ModelAttribute("productDetail") ProductDetail productDetail) {	    	
+	    	System.out.println("INSIDE NEW ADMIN PROJECT");
+	    	return "admin/addProduct";
+	        
 	    }
 	    
 	    
-	    @RequestMapping(value = "/", method = RequestMethod.GET)
-	    public String welcomePage(Model model) {
-	        model.addAttribute("productDetail", new ProductDetail()); // the ProductDetail object is used as a template to generate the form
+
+
+
+		@RequestMapping(value = "/index", method = RequestMethod.GET)
+	    public String welcome() {
+	    	System.out.println("INSIDE Welcome ");
 	        return "helloworld";
 	    }
+	   
 	    
 	    @RequestMapping(value = "/addNewProduct", method = RequestMethod.POST)
-	    public String addNewProduct(@Validated   @ModelAttribute("productDetail")
-	    ProductDetail productDetail,BindingResult result) {	 
+	    public String addNewProduct(@ModelAttribute("productDetail")ProductDetail productDetail) {	 
 	    	
 	    	System.out.println(" Category:" + productDetail.getProductCategory() + 
                     "Product Cost:" + productDetail.getProductCost());
-	    	//productDeatilService.addProductDetail(productDetail);
+	    	productDeatilService.addProductDetail(productDetail);
 	    	System.out.println("INSIDE New Product ");
 	        return "admin/test";
 	    }
